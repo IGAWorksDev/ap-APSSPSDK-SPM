@@ -93,10 +93,10 @@ final class MintegralMediationNativeAdView: UIView {
     }
     
     func stop() {
-//        namRenderer?.namNativewAdView?.isHidden = true
-//        self.nativeAd?.unregisterView()
-//        self.nativeAd?.delegate = nil
-//        self.nativeAd = nil
+        nativeAdLoader?.delegate = nil
+        nativeAdLoader = nil
+        nativeAdView?.removeFromSuperview()
+        nativeAdView = nil
     }
     
     func setupData() {

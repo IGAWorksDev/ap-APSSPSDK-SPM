@@ -11,7 +11,7 @@ import APSSPSDK
 import AdFitSDK
 
 extension APSSPNativeAd {
-    public func bindAdFitRenderer(renderer: APSSPAdFitNativeAdRenderer) {
+    @objc public func bindAdFitRenderer(renderer: APSSPAdFitNativeAdRenderer) {
         if renderer.contentView == nil { renderer.contentView = renderer.adfitNativewAdView }
         self.adfitRenderer = renderer
     }

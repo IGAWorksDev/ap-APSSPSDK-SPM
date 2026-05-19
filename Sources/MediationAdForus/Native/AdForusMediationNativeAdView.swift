@@ -14,7 +14,7 @@ import APSSPSDK
 @objc
 public final class APSSPAdForusNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
-    public var adforusNativeAdView: NativeAdView?
+    @objc public var adforusNativeAdView: NativeAdView?
 }
 
 
@@ -43,7 +43,6 @@ final class AdForusMediationNativeAdView: UIView {
     }
     
     deinit {
-        print("❤️❤️ AdForusNativeView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -67,6 +66,9 @@ final class AdForusMediationNativeAdView: UIView {
     }
     
     func stop() {
+        nativeAd?.delegate = nil
+        nativeAd = nil
+        adLoader = nil
     }
     
     private func setupNativeAd() {

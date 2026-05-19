@@ -9,7 +9,7 @@ import UIKit
 import APSSPSDK
 
 extension APSSPNativeAd {
-    public func bindGAMRenderer(renderer: APSSPGAMNativeAdRenderer) {
+    @objc public func bindGAMRenderer(renderer: APSSPGAMNativeAdRenderer) {
         if renderer.contentView == nil { renderer.contentView = renderer.gamNativeAdView }
         self.gamRenderer = renderer
     }

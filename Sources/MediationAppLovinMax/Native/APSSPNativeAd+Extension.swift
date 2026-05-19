@@ -10,7 +10,7 @@ import UIKit
 import APSSPSDK
 
 extension APSSPNativeAd {
-    public func bindAppLovinMaxRenderer(renderer: APSSPAppLovinNativeAdRenderer) {
+    @objc public func bindAppLovinMaxRenderer(renderer: APSSPAppLovinNativeAdRenderer) {
         if renderer.contentView == nil { renderer.contentView = renderer.nativeAdView }
         self.applovinMaxRenderer = renderer
     }

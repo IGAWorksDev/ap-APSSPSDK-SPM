@@ -14,7 +14,7 @@ import APSSPSDK
 @objc
 public final class APSSPGAMNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
-    public var gamNativeAdView: NativeAdView?
+    @objc public var gamNativeAdView: NativeAdView?
 }
 
 
@@ -43,7 +43,6 @@ final class GAMMediationNativeAdView: UIView {
     }
     
     deinit {
-        print("❤️❤️ GAMNativeView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -67,6 +66,9 @@ final class GAMMediationNativeAdView: UIView {
     }
     
     func stop() {
+        nativeAd?.delegate = nil
+        nativeAd = nil
+        adLoader = nil
     }
     
     private func setupNativeAd() {

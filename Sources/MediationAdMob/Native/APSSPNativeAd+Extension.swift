@@ -9,7 +9,7 @@ import UIKit
 import APSSPSDK
 
 extension APSSPNativeAd {
-    public func bindAdMobRenderer(renderer: APSSPAdMobNativeAdRenderer) {
+    @objc public func bindAdMobRenderer(renderer: APSSPAdMobNativeAdRenderer) {
         if renderer.contentView == nil { renderer.contentView = renderer.admobNativewAdView }
         self.adMobRenderer = renderer
     }

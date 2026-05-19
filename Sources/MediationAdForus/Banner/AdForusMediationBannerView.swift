@@ -34,7 +34,6 @@ final class AdForusMediationBannerView: UIView {
     }
     
     deinit {
-        print("❤️❤️ AdForusBannerView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -54,7 +53,9 @@ final class AdForusMediationBannerView: UIView {
     }
     
     func stop() {
-        
+        bannerView?.delegate = nil
+        bannerView?.removeFromSuperview()
+        bannerView = nil
     }
     
     func addBannerViewToView(_ bannerView: BannerView) {

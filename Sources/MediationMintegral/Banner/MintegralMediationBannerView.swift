@@ -34,7 +34,6 @@ final class MintegralMediationBannerView: UIView {
     }
     
     deinit {
-        print("❤️❤️ AdMobBannerView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -71,7 +70,10 @@ final class MintegralMediationBannerView: UIView {
     }
     
     func stop() {
-        
+        bannerView?.delegate = nil
+        bannerView?.destroy()
+        bannerView?.removeFromSuperview()
+        bannerView = nil
     }
     
     func setupLayout() {

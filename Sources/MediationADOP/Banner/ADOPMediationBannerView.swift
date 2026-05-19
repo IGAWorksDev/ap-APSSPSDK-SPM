@@ -34,7 +34,6 @@ final class ADOPMediationBannerView: UIView {
     }
     
     deinit {
-        print("❤️❤️ ADOPBannerView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -55,7 +54,9 @@ final class ADOPMediationBannerView: UIView {
     }
     
     func stop() {
-        
+        bannerView?.delegate = nil
+        bannerView?.removeFromSuperview()
+        bannerView = nil
     }
     
     func addBannerViewToView(_ bannerView: AdManagerBannerView) {

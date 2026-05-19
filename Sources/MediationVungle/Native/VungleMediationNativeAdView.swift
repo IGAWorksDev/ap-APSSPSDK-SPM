@@ -13,15 +13,15 @@ import VungleAdsSDK
 @objc
 public final class APSSPVungleNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
-    public var nativeAdView: UIView?
-    public var iconView: UIImageView?
-    public var mediaView: MediaView?
-    public var titleLbl: UILabel?
-    public var ratingLbl: UILabel?
-    public var sponsorLbl: UILabel?
-    public var privacyImage: UIImageView?
-    public var adTextLbl: UILabel?
-    public var downloadBtn: UIButton?
+    @objc public var nativeAdView: UIView?
+    @objc public var iconView: UIImageView?
+    @objc public var mediaView: MediaView?
+    @objc public var titleLbl: UILabel?
+    @objc public var ratingLbl: UILabel?
+    @objc public var sponsorLbl: UILabel?
+    @objc public var privacyImage: UIImageView?
+    @objc public var adTextLbl: UILabel?
+    @objc public var downloadBtn: UIButton?
 }
 
 
@@ -53,7 +53,6 @@ final class VungleMediationNativeAdView: UIView {
     }
 
     deinit {
-        print("❤️❤️ NAMNativeView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {

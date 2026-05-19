@@ -10,7 +10,7 @@ import UIKit
 import APSSPSDK
 
 extension APSSPNativeAd {
-    public func bindVungleRenderer(renderer: APSSPVungleNativeAdRenderer) {
+    @objc public func bindVungleRenderer(renderer: APSSPVungleNativeAdRenderer) {
         if renderer.contentView == nil { renderer.contentView = renderer.nativeAdView }
         self.vungleRenderer = renderer
     }

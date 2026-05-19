@@ -13,7 +13,7 @@ import AppLovinSDK
 @objc
 public final class APSSPAppLovinNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
-    public var nativeAdView: MANativeAdView?
+    @objc public var nativeAdView: MANativeAdView?
 }
 
 
@@ -44,7 +44,6 @@ final class AppLovinMediationNativeAdView: UIView {
     }
 
     deinit {
-        print("❤️❤️ NAMNativeView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -73,10 +72,13 @@ final class AppLovinMediationNativeAdView: UIView {
     }
     
     func stop() {
-//        namRenderer?.namNativewAdView?.isHidden = true
-//        self.nativeAd?.unregisterView()
-//        self.nativeAd?.delegate = nil
-//        self.nativeAd = nil
+        if let nativeAd {
+            nativeAdLoader?.destroy(nativeAd)
+        }
+        nativeAdLoader = nil
+        nativeAd = nil
+        nativeAdView?.removeFromSuperview()
+        nativeAdView = nil
     }
     
     func setupData() {

@@ -31,7 +31,6 @@ final class AppLovinMediationBannerView: UIView {
     }
     
     deinit {
-        print("❤️❤️ AdMobBannerView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -63,7 +62,11 @@ final class AppLovinMediationBannerView: UIView {
     }
     
     func stop() {
-        
+        bannerView?.adLoadDelegate = nil
+        bannerView?.adDisplayDelegate = nil
+        bannerView?.adEventDelegate = nil
+        bannerView?.removeFromSuperview()
+        bannerView = nil
     }
     
     func setupLayout() {

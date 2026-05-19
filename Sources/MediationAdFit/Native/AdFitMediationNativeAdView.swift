@@ -13,8 +13,8 @@ import AdFitSDK
 @objc
 public final class APSSPAdFitNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
-    public var adfitNativewAdView: UIView?
-    public var useBizBoardTemplate: Bool = false
+    @objc public var adfitNativewAdView: UIView?
+    @objc public var useBizBoardTemplate: Bool = false
 }
 
 
@@ -52,7 +52,6 @@ final class AdFitMediationNativeAdView: UIView {
     }
 
     deinit {
-        print("❤️❤️ AdFitNativeView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -96,6 +95,8 @@ final class AdFitMediationNativeAdView: UIView {
     }
     
     func stop() {
+        nativeAdLoader?.delegate = nil
+        nativeAdLoader = nil
     }
 }
 

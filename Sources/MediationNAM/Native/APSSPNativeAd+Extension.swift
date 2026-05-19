@@ -10,7 +10,7 @@ import UIKit
 import APSSPSDK
 
 extension APSSPNativeAd {
-    public func bindNAMRenderer(renderer: APSSPNAMNativeAdRenderer) {
+    @objc public func bindNAMRenderer(renderer: APSSPNAMNativeAdRenderer) {
         self.namRenderer = renderer
     }
 }

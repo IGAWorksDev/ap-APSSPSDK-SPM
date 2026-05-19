@@ -15,15 +15,15 @@ import GFPSDK
 public final class APSSPNAMNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
     // Simple Native
-    public var namNativeSimpleAdView: GFPNativeSimpleAdView?
+    @objc public var namNativeSimpleAdView: GFPNativeSimpleAdView?
     // 일반 Native
-    public var namNativeAdView: GFPNativeAdView?
+    @objc public var namNativeAdView: GFPNativeAdView?
     // 공통
-    public var namDedupeManager: GFPAdDedupeManager?
-    public var GFPNativeSetting: GFPNativeAdRenderingSetting?
-    public var GFPNativeSimpleSetting: GFPNativeSimpleAdRenderingSetting?
-    public var timeOut: TimeInterval = 0
-    public var backgroundBlur: Bool = false
+    @objc public var namDedupeManager: GFPAdDedupeManager?
+    @objc public var GFPNativeSetting: GFPNativeAdRenderingSetting?
+    @objc public var GFPNativeSimpleSetting: GFPNativeSimpleAdRenderingSetting?
+    @objc public var timeOut: TimeInterval = 0
+    @objc public var backgroundBlur: Bool = false
 }
 
 
@@ -59,7 +59,6 @@ final class NAMMediationNativeAdView: UIView {
     }
 
     deinit {
-        print("❤️❤️ NAMNativeView 제거 ❤️❤️")
     }
     
     required init?(coder: NSCoder) {
@@ -131,6 +130,10 @@ final class NAMMediationNativeAdView: UIView {
     }
     
     func stop() {
+        adLoader?.delegate = nil
+        adLoader = nil
+        nativeSimpleAd = nil
+        nativeAd = nil
     }
     
     private func loadReactNative(rootViewController: UIViewController, adParam: GFPAdParam) {
