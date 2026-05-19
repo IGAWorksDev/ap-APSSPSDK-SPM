@@ -9,32 +9,32 @@ let package = Package(
     ],
     products: [
         .library(name: "APSSPSDK", targets: ["APSSPSDK"]),
-        .library(name: "APSSPMediationAdMob", targets: ["MediationAdMob"]),
-        .library(name: "APSSPMediationADOP", targets: ["MediationADOP"]),
-        .library(name: "APSSPMediationGAM", targets: ["MediationGAM"]),
-        .library(name: "APSSPMediationAdForus", targets: ["MediationAdForus"]),
-        .library(name: "APSSPMediationAppLovin", targets: ["MediationAppLovin"]),
-        .library(name: "APSSPMediationAppLovinMax", targets: ["MediationAppLovinMax"]),
-        .library(name: "APSSPMediationVungle", targets: ["MediationVungle"]),
-        .library(name: "APSSPMediationMintegral", targets: ["MediationMintegral"]),
-        .library(name: "APSSPMediationNAM", targets: ["MediationNAM"]),
-        .library(name: "APSSPMediationAdFit", targets: ["MediationAdFit"]),
-        .library(name: "APSSPMediationMezzo", targets: ["MediationMezzo"]),
+        .library(name: "APSSPMediationAdMob", targets: ["APSSPMediationAdMob"]),
+        .library(name: "APSSPMediationADOP", targets: ["APSSPMediationADOP"]),
+        .library(name: "APSSPMediationGAM", targets: ["APSSPMediationGAM"]),
+        .library(name: "APSSPMediationAdForus", targets: ["APSSPMediationAdForus"]),
+        .library(name: "APSSPMediationAppLovin", targets: ["APSSPMediationAppLovin"]),
+        .library(name: "APSSPMediationAppLovinMax", targets: ["APSSPMediationAppLovinMax"]),
+        .library(name: "APSSPMediationVungle", targets: ["APSSPMediationVungle"]),
+        .library(name: "APSSPMediationMintegral", targets: ["APSSPMediationMintegral"]),
+        .library(name: "APSSPMediationNAM", targets: ["APSSPMediationNAM"]),
+        .library(name: "APSSPMediationAdFit", targets: ["APSSPMediationAdFit"]),
+        .library(name: "APSSPMediationMezzo", targets: ["APSSPMediationMezzo"]),
     ],
 
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-                 "13.2.0"..."13.3.0"),
+                 exact: "13.2.0"),
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
-                 "13.5.0"..."13.6.2"),
+                 exact: "13.6.2"),
         .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
-                 "7.7.0"..."7.7.2"),
+                 exact: "7.7.2"),
         .package(url: "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",
-                 "8.0.0"..."8.1.3"),
+                 exact: "8.1.1"),
         .package(url: "https://github.com/naver/nam-sdk-ios.git",
-                 "8.20.0"..."8.21.0"),
+                 exact: "8.20.0"),
         .package(url: "https://github.com/adfit/adfit-spm.git",
-                 "3.21.0"..."3.21.24"),
+                 exact: "3.21.24"),
     ],
 
     targets: [
@@ -43,7 +43,7 @@ let package = Package(
                       path: "xcframework/APSSPSDK.xcframework"),
 
         // MARK: - AdMob
-        .target(name: "MediationAdMob",
+        .target(name: "APSSPMediationAdMob",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
@@ -51,7 +51,7 @@ let package = Package(
                 path: "Sources/MediationAdMob"),
 
         // MARK: - ADOP
-        .target(name: "MediationADOP",
+        .target(name: "APSSPMediationADOP",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
@@ -59,7 +59,7 @@ let package = Package(
                 path: "Sources/MediationADOP"),
 
         // MARK: - GAM
-        .target(name: "MediationGAM",
+        .target(name: "APSSPMediationGAM",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
@@ -67,7 +67,7 @@ let package = Package(
                 path: "Sources/MediationGAM"),
 
         // MARK: - AdForus
-        .target(name: "MediationAdForus",
+        .target(name: "APSSPMediationAdForus",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
@@ -75,7 +75,7 @@ let package = Package(
                 path: "Sources/MediationAdForus"),
 
         // MARK: - AppLovin MAX
-        .target(name: "MediationAppLovinMax",
+        .target(name: "APSSPMediationAppLovinMax",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
@@ -83,7 +83,7 @@ let package = Package(
                 path: "Sources/MediationAppLovinMax"),
 
         // MARK: - AppLovin Waterfall
-        .target(name: "MediationAppLovin",
+        .target(name: "APSSPMediationAppLovin",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
@@ -91,7 +91,7 @@ let package = Package(
                 path: "Sources/MediationAppLovin"),
 
         // MARK: - Vungle
-        .target(name: "MediationVungle",
+        .target(name: "APSSPMediationVungle",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
@@ -99,7 +99,7 @@ let package = Package(
                 path: "Sources/MediationVungle"),
 
         // MARK: - Mintegral
-        .target(name: "MediationMintegral",
+        .target(name: "APSSPMediationMintegral",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "MintegralAdSDK", package: "MintegralAdSDK-Swift-Package"),
@@ -107,7 +107,7 @@ let package = Package(
                 path: "Sources/MediationMintegral"),
 
         // MARK: - NAM
-        .target(name: "MediationNAM",
+        .target(name: "APSSPMediationNAM",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "GFPSDK", package: "nam-sdk-ios"),
@@ -115,7 +115,7 @@ let package = Package(
                 path: "Sources/MediationNAM"),
 
         // MARK: - AdFit
-        .target(name: "MediationAdFit",
+        .target(name: "APSSPMediationAdFit",
                 dependencies: [
                     "APSSPSDK",
                     .product(name: "AdFitSDK", package: "adfit-spm"),
@@ -127,7 +127,7 @@ let package = Package(
                       path: "xcframework/LibADPlus.xcframework"),
         .binaryTarget(name: "OMSDK_Cjnet",
                       path: "xcframework/OMSDK_Cjnet.xcframework"),
-        .target(name: "MediationMezzo",
+        .target(name: "APSSPMediationMezzo",
                 dependencies: [
                     "APSSPSDK",
                     "LibADPlus",
