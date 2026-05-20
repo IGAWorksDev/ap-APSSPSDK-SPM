@@ -20,6 +20,9 @@ let package = Package(
         .library(name: "APSSPMediationNAM", targets: ["APSSPMediationNAM"]),
         .library(name: "APSSPMediationAdFit", targets: ["APSSPMediationAdFit"]),
         .library(name: "APSSPMediationMezzo", targets: ["APSSPMediationMezzo"]),
+        .library(name: "APSSPMediationCauly", targets: ["APSSPMediationCauly"]),
+        .library(name: "APSSPMediationMoloco", targets: ["APSSPMediationMoloco"]),
+        .library(name: "APSSPMediationPangle", targets: ["APSSPMediationPangle"]),
     ],
 
     dependencies: [
@@ -35,6 +38,12 @@ let package = Package(
                  exact: "8.20.0"),
         .package(url: "https://github.com/adfit/adfit-spm.git",
                  exact: "3.21.24"),
+        .package(url: "https://github.com/cauly/CaulySPM.git",
+                 exact: "3.1.22"),
+        .package(url: "https://github.com/moloco/moloco-sdk-ios-spm.git",
+                 exact: "4.5.0"),
+        .package(url: "https://github.com/bytedance/AdsGlobalPackage.git",
+                 exact: "7.9.1-release.1"),
     ],
 
     targets: [
@@ -134,5 +143,29 @@ let package = Package(
                     "OMSDK_Cjnet",
                 ],
                 path: "Sources/MediationMezzo"),
+
+        // MARK: - Cauly
+        .target(name: "APSSPMediationCauly",
+                dependencies: [
+                    "APSSPSDK",
+                    .product(name: "CaulySDK", package: "CaulySPM"),
+                ],
+                path: "Sources/MediationCauly"),
+
+        // MARK: - Moloco
+        .target(name: "APSSPMediationMoloco",
+                dependencies: [
+                    "APSSPSDK",
+                    .product(name: "MolocoSDK", package: "moloco-sdk-ios-spm"),
+                ],
+                path: "Sources/MediationMoloco"),
+
+        // MARK: - Pangle
+        .target(name: "APSSPMediationPangle",
+                dependencies: [
+                    "APSSPSDK",
+                    .product(name: "AdsGlobalPackage", package: "AdsGlobalPackage"),
+                ],
+                path: "Sources/MediationPangle"),
     ]
 )
