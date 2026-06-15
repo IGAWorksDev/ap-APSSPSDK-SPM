@@ -75,6 +75,12 @@ final class MintegralMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !unitID.isEmpty else {
+            APLogger.error("Mintegral Native unitID is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "unitID is empty")
+            return
+        }
+        
         guard let rootViewController else {
             APLogger.error("NativeAd rootViewController is nil")
             delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")
