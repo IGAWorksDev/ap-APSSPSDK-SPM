@@ -43,7 +43,7 @@ let package = Package(
         .package(url: "https://github.com/moloco/moloco-sdk-ios-spm.git",
                  from: "4.5.1"),
         .package(url: "https://github.com/bytedance/AdsGlobalPackage.git",
-                 exact: "8.1.0.9"),
+                 exact: "8.1.0-release.1"),
     ],
 
     targets: [
