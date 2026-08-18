@@ -168,6 +168,11 @@ private extension NAMMediationUnifiedNativeAdView {
     func handleNativeAd(_ nativeAd: GFPNativeAd) {
         self.nativeAd = nativeAd
 
+        guard let container = viewBinder.containerView else {
+            delegate?.unifiedNativeLoadFail(error: .nextMediation, errorMessage: "NAM containerView is nil")
+            return
+        }
+
         guard let mediaContainer = viewBinder.mediaContainerView else {
             delegate?.unifiedNativeLoadFail(error: .nextMediation, errorMessage: "NAM mediaContainerView is nil")
             return
@@ -177,15 +182,17 @@ private extension NAMMediationUnifiedNativeAdView {
         let adView = GFPNativeAdView()
         self.gfpNativeAdView = adView
 
-        // GFPMediaView 생성 및 GFPNativeAdView에 addSubview
+        // ✅ Android처럼: mediaView를 setMediaView()로 연결 (adView의 subview로 추가하지 않음)
+        // mediaContainerView가 이미 레이아웃에 있으므로, GFPMediaView를 그 안에 넣음
         let mediaView = GFPMediaView()
         mediaView.translatesAutoresizingMaskIntoConstraints = false
-        adView.addSubview(mediaView)
+        mediaContainer.subviews.forEach { $0.removeFromSuperview() }
+        mediaContainer.addSubview(mediaView)
         NSLayoutConstraint.activate([
-            mediaView.topAnchor.constraint(equalTo: adView.topAnchor),
-            mediaView.leadingAnchor.constraint(equalTo: adView.leadingAnchor),
-            mediaView.trailingAnchor.constraint(equalTo: adView.trailingAnchor),
-            mediaView.bottomAnchor.constraint(equalTo: adView.bottomAnchor)
+            mediaView.topAnchor.constraint(equalTo: mediaContainer.topAnchor),
+            mediaView.leadingAnchor.constraint(equalTo: mediaContainer.leadingAnchor),
+            mediaView.trailingAnchor.constraint(equalTo: mediaContainer.trailingAnchor),
+            mediaView.bottomAnchor.constraint(equalTo: mediaContainer.bottomAnchor)
         ])
         adView.mediaView = mediaView
 
@@ -203,11 +210,12 @@ private extension NAMMediationUnifiedNativeAdView {
         adView.nativeAd = nativeAd
         nativeAd.delegate = self
 
-        // mediaContainerView에 GFPNativeAdView 삽입
-        mediaContainer.subviews.forEach { $0.removeFromSuperview() }
-        adView.frame = mediaContainer.bounds
+        // ✅ Android처럼: containerView에 GFPNativeAdView 추가
+        container.subviews.filter { $0 is GFPNativeAdView }.forEach { $0.removeFromSuperview() }
+        adView.frame = container.bounds
         adView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mediaContainer.addSubview(adView)
+        adView.backgroundColor = .clear  // 투명
+        container.addSubview(adView)
 
         // ViewBinder에 텍스트 바인딩
         viewBinder.titleLabel?.text = nativeAd.title
