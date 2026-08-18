@@ -162,6 +162,23 @@ private extension NAMMediationUnifiedNativeAdView {
 }
 
 
+// MARK: - Custom GFPNativeAdView (hitTest override)
+private class TransparentHitTestNativeAdView: GFPNativeAdView {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        // super.hitTest() 먼저 호출해서 GFPNativeAdView의 자식(info button 등)이 받아야 하는지 확인
+        let hitView = super.hitTest(point, with: event)
+
+        // 자식 뷰(info button 등)가 받아야 하면 그대로 리턴
+        if let hitView = hitView, hitView !== self {
+            return hitView
+        }
+
+        // GFPNativeAdView 자기 자신이면 (= 빈 영역) 터치 통과
+        return nil
+    }
+}
+
+
 // MARK: - NativeAd 처리
 private extension NAMMediationUnifiedNativeAdView {
 
@@ -178,12 +195,11 @@ private extension NAMMediationUnifiedNativeAdView {
             return
         }
 
-        // GFPNativeAdView 생성
-        let adView = GFPNativeAdView()
+        // GFPNativeAdView 생성 (hitTest override 버전)
+        let adView = TransparentHitTestNativeAdView()
         self.gfpNativeAdView = adView
 
-        // ✅ Android처럼: mediaView를 setMediaView()로 연결 (adView의 subview로 추가하지 않음)
-        // mediaContainerView가 이미 레이아웃에 있으므로, GFPMediaView를 그 안에 넣음
+        // ✅ Android처럼: mediaView를 mediaContainerView에 배치
         let mediaView = GFPMediaView()
         mediaView.translatesAutoresizingMaskIntoConstraints = false
         mediaContainer.subviews.forEach { $0.removeFromSuperview() }
@@ -210,12 +226,14 @@ private extension NAMMediationUnifiedNativeAdView {
         adView.nativeAd = nativeAd
         nativeAd.delegate = self
 
-        // ✅ Android처럼: containerView에 GFPNativeAdView 추가
+        // ✅ Android처럼: GFPNativeAdView를 containerView 전체에 추가 (최상단)
         container.subviews.filter { $0 is GFPNativeAdView }.forEach { $0.removeFromSuperview() }
         adView.frame = container.bounds
         adView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         adView.backgroundColor = .clear  // 투명
-        container.addSubview(adView)
+        container.addSubview(adView)  // ✅ 최상단에 올림 (overlay가 모든 걸 덮도록)
+
+        // hitTest override로 adChoicesView 영역만 터치 받고 나머지는 통과
 
         // ViewBinder에 텍스트 바인딩
         viewBinder.titleLabel?.text = nativeAd.title
