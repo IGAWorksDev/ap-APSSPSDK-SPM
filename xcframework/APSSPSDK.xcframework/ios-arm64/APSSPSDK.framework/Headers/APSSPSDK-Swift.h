@@ -371,10 +371,13 @@ SWIFT_CLASS("_TtC8APSSPSDK8APSSPAds")
 /// returns:
 /// SDK 버전 문자열 (예: “3.0.0”)
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+/// <code>setUIDIdentifier</code> 로 발급받은 UID2 토큰. 미디에이션 어댑터가 네트워크에 전달할 때 읽는다.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable uidToken;)
++ (NSString * _Nullable)uidToken SWIFT_WARN_UNUSED_RESULT;
 /// 리워드 비디오 사용 시 사용자 식별자를 설정합니다.
 /// note:
-/// 리워드 비디오 광고 사용 시 반드시 설정해야 합니다.
-/// \param usn 매체에서 관리하는 사용자 고유 식별자
+/// 설정한 값은 기기에 저장되어 앱 재시작 후에도 유지됩니다. 로그인·계정 전환 시 호출하고, 로그아웃 시 빈 문자열로 초기화하세요.
+/// \param usn 매체에서 관리하는 사용자 고유 식별자. 빈 문자열을 전달하면 저장된 값을 삭제합니다.
 ///
 + (void)setUSerIDWithUsn:(NSString * _Nonnull)usn;
 /// SDK를 초기화합니다. 앱 시작 시 1회 호출합니다.
@@ -386,6 +389,9 @@ SWIFT_CLASS("_TtC8APSSPSDK8APSSPAds")
 ///
 + (void)initializeSDKWith:(APSSPInitializationSettings * _Nonnull)settings completion:(void (^ _Nullable)(void))completion;
 /// UID2.0 식별자를 설정합니다. 쿠팡 DSP로부터 높은 단가의 광고를 제공받기 위해 사용합니다.
+/// note:
+/// 토큰은 앱 실행 중 한 번 발급받아 계속 사용합니다. 같은 식별자로 다시 호출하면 재발급하지 않고,
+/// 다른 식별자로 호출하면 기존 토큰을 버리고 새로 발급받습니다.
 /// \param identityType 식별자 타입 (0 = email, 1 = phone)
 ///
 /// \param identifier 이메일 주소 또는 전화번호
@@ -417,6 +423,18 @@ SWIFT_CLASS("_TtC8APSSPSDK8APSSPAds")
 /// \param enabled true 시 화면에 검사기 버튼 표시
 ///
 + (void)setAdInspectorEnabled:(BOOL)enabled;
+/// 광고 영상 소리 재생 시 audio session 을 SDK 가 관리할지 설정합니다.
+/// note:
+/// 네이티브(UnifiedNative) 비디오 광고에 적용됩니다. 전면·리워드·비디오믹스 영상에는 적용되지 않습니다.
+/// 앱의 audio session 이 이미 <code>.playback</code> / <code>.playAndRecord</code> 이면 변경하지 않습니다.
+/// warning:
+/// 세션 비활성화 시 앱이 재생 중인 다른 소리도 멈출 수 있습니다. 통화·녹음 기능이 있거나
+/// 앱이 직접 audio session 을 관리한다면 false 로 두세요.
+/// \param managed true = SDK 가 관리. 광고 소리가 나는 동안 세션을 <code>.playback</code> 으로 바꿔 무음 모드에서도 소리가 나게 하고
+/// (다른 앱 음악은 멈춤), 광고 영상이 모두 멈추면 원래 카테고리로 되돌린 뒤 다른 앱 음악이 다시 재생되도록 세션을 비활성화합니다.
+/// false(기본값) = SDK 는 audio session 을 변경하지 않습니다. 무음 모드에서는 광고 소리가 나지 않습니다(iOS 기본 동작).
+///
++ (void)setAudioSessionManagedBySDK:(BOOL)managed;
 /// 고객센터(CS) 화면을 표시합니다.
 /// \param rootViewController CS 화면을 present할 뷰 컨트롤러
 ///
@@ -553,7 +571,10 @@ SWIFT_CLASS("_TtC8APSSPSDK15APSSPBannerView")
 ///     호출 시 서버에서 광고를 요청하고, 결과는 delegate로 전달됩니다.
 ///   </li>
 ///   <li>
-///     이미 로드 중인 경우 기존 광고를 중지하고 새로 로드합니다.
+///     로드 중에 다시 호출하면 무시합니다.
+///   </li>
+///   <li>
+///     새 광고를 받을 때까지 기존 광고는 화면에 유지됩니다.
 ///   </li>
 /// </ul>
 - (void)loadAd;
@@ -901,6 +922,13 @@ SWIFT_CLASS("_TtC8APSSPSDK19APSSPInterstitialAd")
 /// returns:
 /// 광고 표시 성공 여부
 - (BOOL)presentFrom:(UIViewController * _Nonnull)from;
+/// 전면 광고를 중지하고 리소스를 해제합니다.
+/// <ul>
+///   <li>
+///     로드 중이면 진행 중인 요청을 취소하며, 이후 결과 콜백은 전달되지 않습니다.
+///   </li>
+/// </ul>
+- (void)stopAd;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APSSPSDK-Swift.h</key>
 		<data>
-		vCLuXulo9b3/p+czdk5dayRSKnc=
+		Tz1TfDhn3qG6/+5wAWFiEoZ1opE=
 		</data>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		2gnlsonzTpLDi14C6iMBAbMnWow=
+		+fSL//jnHRH2fNd2gCVkqETlank=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		o0FoQgyU3Aijy/aj4McQAN0Fnu4=
+		p5SOjY7GtTvaonzWA3KLx+VIPE8=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		BFkCTcj5jtYkppu2jU8hiMEa69g=
+		AphQdwnLPw1JThO9871bAW7mdrg=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		o0FoQgyU3Aijy/aj4McQAN0Fnu4=
+		p5SOjY7GtTvaonzWA3KLx+VIPE8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -64,6 +64,30 @@
 		<data>
 		Z413kdOmGk5sEKPe2x9WblS5ZGc=
 		</data>
+		<key>apssp_volume_off.png</key>
+		<data>
+		DO86jNCHS1msmxL0iljjC7yeeL8=
+		</data>
+		<key>apssp_volume_off@2x.png</key>
+		<data>
+		0Cs6WRRSPIMXKzqILEMy+L1I9iA=
+		</data>
+		<key>apssp_volume_off@3x.png</key>
+		<data>
+		CJBjpXee+mQ5EE4Wias6O8yVzmA=
+		</data>
+		<key>apssp_volume_on.png</key>
+		<data>
+		ss0p680bHHkn4HP/3tX1pz950DU=
+		</data>
+		<key>apssp_volume_on@2x.png</key>
+		<data>
+		RT3Zc8AcUx6LMkJ+befieoKo93Q=
+		</data>
+		<key>apssp_volume_on@3x.png</key>
+		<data>
+		hdkYTykIEdZAXsflEx5akH/oqw4=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -71,7 +95,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iw3DiqO/B+l2P1GrvFVlEqmlfa1e+DTkcE8hiLVGuQs=
+			cLwdzL7Kffti6WHXcTymudG1r+IOD5V4baRuvminwr0=
 			</data>
 		</dict>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
@@ -85,28 +109,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Qdkq9OgK+8o9wVwyMUU+nW5ysF/L752OXdn/Q1lJjo=
+			u2Atwl1hcNlOMUPprElkr0q9EF2Hfs5u8inFKDfBnOw=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxef9LT1WF8g9BXq1Daj0raSr30KGBas8cQl999PXoE=
+			ssjdnDwKVEy52gmPR9etPUngpkF+9/GFJbXYIfFztf0=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NNImHzQffipTqreVSsFo24qTqtlQFkabQ4W3+VkGKyM=
+			QaYe7B2Fv0Wf2sNhXbMpLfx0C0B4WJn6PS3mZ7y0hiY=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxef9LT1WF8g9BXq1Daj0raSr30KGBas8cQl999PXoE=
+			ssjdnDwKVEy52gmPR9etPUngpkF+9/GFJbXYIfFztf0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,6 +187,48 @@
 			<key>hash2</key>
 			<data>
 			hFAQA4q65DbKzDhIV1QUM4cDHgxsrBxRdmCYeXXVge4=
+			</data>
+		</dict>
+		<key>apssp_volume_off.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			t4AtnsgOtYMiyzC1nRKyfMcXRC+8fSUoZbk2RGp49ak=
+			</data>
+		</dict>
+		<key>apssp_volume_off@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0i9WhRkYqy63+Dq7FR52lrN0TBAWySxzNyhLqM5C44g=
+			</data>
+		</dict>
+		<key>apssp_volume_off@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eHqCF8Lmg5rQSDy4m628yjw7XfbtHmaUPIPGuLyBbeg=
+			</data>
+		</dict>
+		<key>apssp_volume_on.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			84hofv11mTGnH+CR0vOkNq8j50kJDH51wIpsN3So5DI=
+			</data>
+		</dict>
+		<key>apssp_volume_on@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kUJ7JgR+b1O/zb4LS6W6E8nZO9M6Df2xTY+agLuMRZc=
+			</data>
+		</dict>
+		<key>apssp_volume_on@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tifzZ25DzCPbITYLM0tRHUMheoJ+heWgCQQvrR+uUaU=
 			</data>
 		</dict>
 	</dict>

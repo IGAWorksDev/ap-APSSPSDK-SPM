@@ -6,6 +6,7 @@ import AVFoundation
 import AdSupport
 import AppTrackingTransparency
 import CoreTelephony
+import CryptoKit
 import Foundation
 import Network
 import Swift
@@ -274,6 +275,9 @@ public enum APSSPBiddingKey : Swift.String {
 }
 @_inheritsConvenienceInitializers @objc final public class APSSPAds : ObjectiveC.NSObject {
   @objc public static func sdkVersion() -> Swift.String
+  @objc public static var uidToken: Swift.String? {
+    get
+  }
   @objc public static func setUSerID(usn: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func initializeSDK(with settings: APSSPSDK.APSSPInitializationSettings, completion: (() -> Swift.Void)? = nil)
@@ -285,6 +289,7 @@ public enum APSSPBiddingKey : Swift.String {
   @objc public static func setGender(_ gender: APSSPSDK.APSSPGender)
   @objc public static func setLogType(_ type: APSSPSDK.APSSPLogType)
   @objc public static func setAdInspectorEnabled(_ enabled: Swift.Bool)
+  @objc public static func setAudioSessionManagedBySDK(_ managed: Swift.Bool)
   @objc public static func presentCSViewController(_ rootViewController: UIKit.UIViewController, userID: Swift.String)
   @objc override dynamic public init()
   @objc deinit
@@ -364,7 +369,7 @@ public enum APSSPBiddingKey : Swift.String {
     get
   }
   @objc final public var currentNetwork: Swift.Int {
-    get
+    @objc get
   }
   @objc final public var rewardVideoAdIsVisible: Swift.Bool {
     get
@@ -711,6 +716,7 @@ public protocol APSSPBannerAdapterInappBiddingProtocol : APSSPSDK.APSSPBannerAda
   @objc final public func load()
   @discardableResult
   @objc final public func present(from: UIKit.UIViewController) -> Swift.Bool
+  @objc final public func stopAd()
 }
 @objc public protocol APSSPBannerViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc optional func apsspBannerViewLoadSuccess(bannerView: APSSPSDK.APSSPBannerView)
@@ -795,7 +801,7 @@ extension APSSPSDK.APSSPBannerView {
     get
   }
   @objc final public var currentNetwork: Swift.Int {
-    get
+    @objc get
   }
   @objc final public var adStatus: APSSPSDK.APSSPFullscreenAdStatusInfo {
     @objc get
@@ -1333,7 +1339,7 @@ public protocol APSSPUnifiedNativeAdapterInAppBiddingProtocol : APSSPSDK.APSSPUn
     get
   }
   @objc final public var currentNetwork: Swift.Int {
-    get
+    @objc get
   }
   @objc final public var videoMixAdIsVisible: Swift.Bool {
     get
