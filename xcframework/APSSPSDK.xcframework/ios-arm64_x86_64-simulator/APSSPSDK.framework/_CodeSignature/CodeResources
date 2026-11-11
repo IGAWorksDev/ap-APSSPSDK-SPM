@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APSSPSDK-Swift.h</key>
 		<data>
-		VWy32E2Ywbcec6Hgm2d1wLBOI28=
+		W5ElZ9BhYfEx7NOH2ZdIYl4BgKM=
 		</data>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
 		<data>
@@ -14,43 +14,43 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gW3724xrJz+aXTovMAW0tzrvSvQ=
+		nwl4RCpIXfZyA/DEjEvHIBFqnnM=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		+fSL//jnHRH2fNd2gCVkqETlank=
+		gpapC0LvO3jRyRUz/cTNtCqEK7U=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		WUZ4qhJ8zCE11buhvfVhAONn4eU=
+		tenY+BBXutVnELUE0xxlXsktf94=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RrKnijeco5Fi686geg4geGZbM/I=
+		jtIRIjYKt7yu/gGn4Vx5xmqJlIo=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WUZ4qhJ8zCE11buhvfVhAONn4eU=
+		tenY+BBXutVnELUE0xxlXsktf94=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		+fSL//jnHRH2fNd2gCVkqETlank=
+		gpapC0LvO3jRyRUz/cTNtCqEK7U=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		KBIEs3CjfZfA5giLbrAK2qDr8vo=
+		33gviIYppMEnt+mKkMx5rq3PEYw=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		7IRULNIqIZVQRtOxcE6sCaSHw6A=
+		E6XoM4xXN4hyhtiU6YnjNRFF994=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		KBIEs3CjfZfA5giLbrAK2qDr8vo=
+		33gviIYppMEnt+mKkMx5rq3PEYw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		kzqJ0vfK77TF2OiqWBUMWd/w6+Q=
+		/WkVmatY68DIPzILOm1Ic4KF3RY=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -111,7 +111,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0BZPFXzoDnLb6/VHig5xY/s5insHy9ocANe2XWXoN0U=
+			S8OywgWdSOYcblcwAADXcm5ju5XtMFrZH+Mf0mH1ewY=
 			</data>
 		</dict>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
@@ -125,63 +125,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u2Atwl1hcNlOMUPprElkr0q9EF2Hfs5u8inFKDfBnOw=
+			HtC/0LiEjdcPg+7sSWqheUKktKPHG6F3ydV+szmJVJ0=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hFAP5JbGMY2/4Tf2zzLxQZ+PklEttSjBZcQzzjQxnKU=
+			NTC1I2egQkXypX5BNt6IF3qbmh+Nt1I7aPgvg1JBbhI=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YumUYaWM+xV9u2SHmEIsv9R+0vwXV6qyq+7T+HFB5Cw=
+			tOwz2ZIpLdcr14j5sT6v/ebvIDwimahxSZsNPXL8bq8=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hFAP5JbGMY2/4Tf2zzLxQZ+PklEttSjBZcQzzjQxnKU=
+			NTC1I2egQkXypX5BNt6IF3qbmh+Nt1I7aPgvg1JBbhI=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u2Atwl1hcNlOMUPprElkr0q9EF2Hfs5u8inFKDfBnOw=
+			HtC/0LiEjdcPg+7sSWqheUKktKPHG6F3ydV+szmJVJ0=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A8v6FWaYrBmpU0Fvv3Ke69eONyYdRkwd4BuAiOz8OtY=
+			5QzV35ZpAHls5rwCOjhQ4BYz0lc1q/t3EKTbExewvTU=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HE29z0npL/CNAUipiJIhXc4NOAYPjw1k89YzXsIgdCc=
+			ExJz1xGIwbLWqB8t3/aCC7poTStFZhV7xfL/rIPGoJM=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A8v6FWaYrBmpU0Fvv3Ke69eONyYdRkwd4BuAiOz8OtY=
+			5QzV35ZpAHls5rwCOjhQ4BYz0lc1q/t3EKTbExewvTU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HrHKxiqSos7A/rDPo6hEHuv+HSk4+JNaLRYgn5OCzHc=
+			WG9M/UvQEvb1wYhlc6tP/Y4UWqKkKqdOfF73HQTJ8Vs=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>

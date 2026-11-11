@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APSSPSDK-Swift.h</key>
 		<data>
-		Tz1TfDhn3qG6/+5wAWFiEoZ1opE=
+		g37CZOfMo7Sv+mjYn5QQOclLnMY=
 		</data>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qsOHkAIWh+bdjzPrg+sPzRvh+2w=
+		ATFQfLWPNnSB8Bkpvai0uc+pb7Q=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		+fSL//jnHRH2fNd2gCVkqETlank=
+		gpapC0LvO3jRyRUz/cTNtCqEK7U=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		p5SOjY7GtTvaonzWA3KLx+VIPE8=
+		4CCiLRg0zdZCAwa4W9HL98wQ+D0=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		AphQdwnLPw1JThO9871bAW7mdrg=
+		23R/6HaLLaW8xyHNfAt4yw0fIXg=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		p5SOjY7GtTvaonzWA3KLx+VIPE8=
+		4CCiLRg0zdZCAwa4W9HL98wQ+D0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		kzqJ0vfK77TF2OiqWBUMWd/w6+Q=
+		/WkVmatY68DIPzILOm1Ic4KF3RY=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -95,7 +95,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cLwdzL7Kffti6WHXcTymudG1r+IOD5V4baRuvminwr0=
+			/9VB5DlxkO19Zdfszxmx6ZKrMeh3xiCPblDMuogSHWw=
 			</data>
 		</dict>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
@@ -109,35 +109,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u2Atwl1hcNlOMUPprElkr0q9EF2Hfs5u8inFKDfBnOw=
+			HtC/0LiEjdcPg+7sSWqheUKktKPHG6F3ydV+szmJVJ0=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ssjdnDwKVEy52gmPR9etPUngpkF+9/GFJbXYIfFztf0=
+			mkc+ClW499TCAIwTjVgn52NLCPzSYMB8RPbS+0y4KKc=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QaYe7B2Fv0Wf2sNhXbMpLfx0C0B4WJn6PS3mZ7y0hiY=
+			Hhm7KJhULDTRmDyl3e48gRRX5gF8zT8eiPEfkj3xXMQ=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ssjdnDwKVEy52gmPR9etPUngpkF+9/GFJbXYIfFztf0=
+			mkc+ClW499TCAIwTjVgn52NLCPzSYMB8RPbS+0y4KKc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HrHKxiqSos7A/rDPo6hEHuv+HSk4+JNaLRYgn5OCzHc=
+			WG9M/UvQEvb1wYhlc6tP/Y4UWqKkKqdOfF73HQTJ8Vs=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>

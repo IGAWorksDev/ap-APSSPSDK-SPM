@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "APSSPSDK",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(name: "APSSPSDK", targets: ["APSSPSDK"]),
